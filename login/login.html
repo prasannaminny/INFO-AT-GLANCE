@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register Here</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form name="f1" method="post" action="data.php" class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Get In Touch
+				</span>
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<label class="label-input100" for="name">Full name</label>
+					<input id="name" class="input100" type="text" name="t1" placeholder="Enter your name...">
+					<span class="focus-input100"></span>
+				</div>
+
+               <div class="wrap-input100 validate-input" data-validate="Number is required">
+					<label class="label-input100" for="phone no">Phone no</label>
+					<input id="number" class="input100" type="number" name="t2" placeholder="Enter your number...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<label class="label-input100" for="email">Email Address</label>
+					<input id="email" class="input100" type="text" name="t3" placeholder="Enter your email...">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<div class="label-input100">Blood Group</div>
+					<div>
+						<select class="js-select2" name="t4">
+							<option>Please choose</option>
+							<option>A +ve</option>
+                            <option>A -ve</option>
+                            <option>B +ve</option>
+                            <option>B -ve</option>
+                            <option>AB +ve</option>
+                            <option>AB -ve</option>
+                            <option>O +ve</option>
+							<option>O -ve</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+                
+                <div class="wrap-input100 validate-input" data-validate = "Valid roll no is required">
+					<label class="label-input100" for="roll no">Roll no</label>
+					<input id="roll no" class="input100" type="number" name="t5" placeholder="Enter your roll no...">
+					<span class="focus-input100"></span>
+				</div>
+                
+                
+                <div class="wrap-input100">
+					<div class="label-input100">Branch</div>
+					<div>
+						<select class="js-select2" name="t6">
+							<option>Please choose</option>
+							<option>CSE</option>
+                            <option>ECE</option>
+                            <option>EEE</option>
+                            <option>Civil</option>
+                            <option>Mechanical</option>
+                           
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+                
+                <div class="wrap-input100">
+					<div class="label-input100">Year</div>
+					<div>
+						<select class="js-select2" name="t7">
+							<option>Please chooses</option>
+							<option>1st year</option>
+                            <option>2nd year</option>
+                            <option>3rd year</option>
+                            <option>4th year</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<label class="label-input100" for="address">Address</label>
+					<textarea id="address" class="input100" name="t8" placeholder="Type your address here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button onClick="myfunction()" class="contact100-form-btn">
+						Send
+					</button>
+                   <script>
+					function myfunction(){
+						alert(" You detail is submited");
+					}
+					</script> 
+				</div>
+
+			
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>
